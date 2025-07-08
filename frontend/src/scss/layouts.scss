@@ -1,0 +1,54 @@
+@use 'variables' as *;
+
+.l-layout {
+    position: relative;
+    min-height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.l-header {
+    position: relative;
+    min-height: 100px;
+    z-index: 40;
+    background: $grey;
+
+    .header {
+        &__wrapper {
+            margin: 0 auto;
+            max-width: 1400px;
+            width: 100%;
+            z-index: 10;
+            position: relative;
+        }
+    }
+}
+
+.l-main {
+    .main {
+        &__wrapper {
+            margin: 0 auto;
+            max-width: 1440px;
+            width: 100%;
+            position: relative;
+        }
+    }
+}
+
+.l-footer {
+    min-height: 100px;
+    position: relative;
+    z-index: 40;
+    overflow: hidden;
+    background: #000;
+
+    .footer {
+        &__wrapper {
+            margin: 0 auto;
+            max-width: 1400px;
+            width: 100%;
+            z-index: 10;
+            position: relative;
+        }
+    }
+}

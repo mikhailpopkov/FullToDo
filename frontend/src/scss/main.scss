@@ -1,0 +1,93 @@
+@use 'variables' as *;
+
+.b-header {
+    .header {
+        &__container {
+            padding: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        &__logo {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            text-decoration: none;
+            padding: 20px;
+            background: $white;
+            border-radius: 20px;
+            transition: box-shadow .3s ease-in-out;
+
+            &:hover {
+                box-shadow: $green 0px 5px 15px;
+
+                .header__title {
+                    color: $green;
+                }
+            }
+
+            img {
+                max-width: 70px;
+            }
+        }
+
+        &__title {
+            color: $black;
+            font-size: 24px;
+            font-weight: 600;
+            transition: color .3s ease-in-out;
+        }
+
+        &__list {
+            display: flex;
+            gap: 50px;
+
+            li {
+                list-style-type: none;
+            }
+
+            a {
+                color: $black;
+                text-decoration: none;
+                font-size: 18px;
+                padding: 10px 30px;
+                background: $white;
+                border-radius: 10px;
+                transition: ease-out .4s;
+                box-shadow: inset 0 0 0 0 $white;
+                font-weight: 500;
+
+                &:hover {
+                    box-shadow:  inset 0 0 0 30px $green;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+.b-tasks {
+    padding: 30px 0;
+
+    .tasks {
+        &__container {
+            display: flex;
+            min-height: 530px;
+        }
+
+        &__menu {
+            position: relative;
+            width: 30%;
+            background: $green;
+            color: $white;
+            padding: 55px 30px 30px;
+            box-sizing: border-box;
+        }
+
+        &__content {
+            padding: 55px 50px 50px;
+            width: 70%;
+            background: $grey;
+        }
+    }
+}
