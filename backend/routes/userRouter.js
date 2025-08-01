@@ -1,16 +1,11 @@
 import express from "express";
 import { registrationValidation } from "../validation/registration.js";
-import { validationResult } from "express-validator";
+import userController from "../controllers/userController.js";
 
 const router = express.Router();
 
-router.post("/registration", registrationValidation(), (req,res) => {
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-        return res.status(400).json({ success: false, errors: errors.array() });
-    }
-
-    res.json({ status: "ok" });
-})
+router.post("/registration", registrationValidation())
+router.post("/login", userController.login)
+// router.get("/auth")
 
 export default router;
