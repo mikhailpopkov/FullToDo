@@ -34,4 +34,4 @@ TasksList.belongsTo(Tasks);
 Tasks.hasOne(Readiness);
 Readiness.belongsTo(Tasks);
 
-export default { User, Tasks, TasksList, Readiness };
+export { User, Tasks, TasksList, Readiness };
